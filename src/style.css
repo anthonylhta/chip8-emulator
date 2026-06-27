@@ -1,0 +1,108 @@
+:root {
+  --bg: #1a1a2e;
+  --panel: #16213e;
+  --fg: #e6e6e6;
+  --accent: #9bbc0f;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: var(--bg);
+  color: var(--fg);
+  font-family:
+    ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+}
+
+main {
+  width: min(820px, 100%);
+  padding: 2rem 1.25rem 4rem;
+}
+
+h1 {
+  letter-spacing: 0.3em;
+  font-weight: 800;
+  margin: 0 0 1rem;
+}
+
+.screen-wrap {
+  display: flex;
+  justify-content: center;
+  background: var(--panel);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+canvas {
+  width: 100%;
+  max-width: 768px;
+  height: auto;
+  image-rendering: pixelated;
+  border-radius: 4px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+
+select,
+input[type='file'],
+button {
+  font: inherit;
+  background: var(--panel);
+  color: var(--fg);
+  border: 1px solid #2a3a5e;
+  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--accent);
+}
+
+.status {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.help {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.help pre {
+  background: var(--panel);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  line-height: 1.4;
+  overflow-x: auto;
+}
+
+kbd {
+  background: #2a3a5e;
+  border-radius: 3px;
+  padding: 0.05rem 0.35rem;
+}

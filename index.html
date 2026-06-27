@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHIP-8 Emulator</title>
+  </head>
+  <body>
+    <main>
+      <h1>CHIP-8</h1>
+
+      <div class="screen-wrap">
+        <canvas id="screen"></canvas>
+      </div>
+
+      <div class="controls">
+        <label>
+          ROM
+          <select id="rom-select">
+            <option value="">— choose —</option>
+          </select>
+        </label>
+
+        <label>
+          Load file
+          <input id="rom-file" type="file" accept=".ch8,.rom,.bin" />
+        </label>
+
+        <button id="pause">Pause</button>
+        <button id="reset">Reset</button>
+
+        <label>
+          Speed
+          <input id="speed" type="range" min="2" max="30" step="1" value="10" />
+          <span id="speed-label"></span>
+        </label>
+      </div>
+
+      <p class="status">Status: <span id="status">Idle</span></p>
+
+      <section class="help">
+        <h2>Keypad</h2>
+        <p>The CHIP-8 hex keypad is mapped to the left of the keyboard:</p>
+        <pre>
+ CHIP-8        Keyboard
+ 1 2 3 C       1 2 3 4
+ 4 5 6 D       Q W E R
+ 7 8 9 E       A S D F
+ A 0 B F       Z X C V</pre>
+        <p>
+          In Pong, use <kbd>1</kbd>/<kbd>Q</kbd> for the left paddle and
+          <kbd>4</kbd>/<kbd>R</kbd> for the right paddle.
+        </p>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

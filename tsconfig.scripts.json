@@ -1,0 +1,9 @@
+{
+  "comment": "Node context for the headless test/ROM tooling, kept separate from the browser app so DOM and Node globals don't bleed into each other.",
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2022"],
+    "types": ["node"]
+  },
+  "include": ["scripts", "eslint.config.js"]
+}
