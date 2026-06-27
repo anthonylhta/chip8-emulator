@@ -14,7 +14,8 @@
     "format:check": "prettier --check .",
     "test": "tsx scripts/run-tests.ts",
     "test:rom": "tsx scripts/run-rom.ts",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "ci": "npm run typecheck && npm run lint && npm run format:check && npm test && npm run build"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
