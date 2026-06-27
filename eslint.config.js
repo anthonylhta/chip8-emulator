@@ -4,7 +4,13 @@ import prettier from 'eslint-config-prettier';
 
 export default tseslint.config(
   {
-    ignores: ['dist', 'node_modules', 'public'],
+    ignores: [
+      'dist',
+      'node_modules',
+      'public',
+      'test-results',
+      'playwright-report',
+    ],
   },
   js.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
@@ -13,7 +19,11 @@ export default tseslint.config(
     files: ['**/*.ts'],
     languageOptions: {
       parserOptions: {
-        project: ['./tsconfig.json', './tsconfig.scripts.json'],
+        project: [
+          './tsconfig.json',
+          './tsconfig.scripts.json',
+          './tsconfig.e2e.json',
+        ],
         tsconfigRootDir: import.meta.dirname,
       },
     },

@@ -38,7 +38,16 @@ Thumbs.db
 .vite/
 *.tsbuildinfo
 
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
 # Environment
 .env
 .env.*
 !.env.example
+
+# Local-only working directory (never committed)
+notes/

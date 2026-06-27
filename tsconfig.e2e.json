@@ -1,0 +1,9 @@
+{
+  "comment": "Playwright e2e tests: Node context for the test runner plus DOM types for page.evaluate browser callbacks.",
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["node"]
+  },
+  "include": ["e2e", "playwright.config.ts"]
+}
