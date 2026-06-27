@@ -42,3 +42,6 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+
+# Local-only working directory (never committed)
+notes/
